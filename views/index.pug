@@ -3,7 +3,9 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  ul 
-    each msg in messages
-      li #{msg.text} #{msg.user} #{msg.added}
+  //- display each msg by looping through msgs array in index route
 
+  ul
+    each val in messages
+      li=val.text
+      li=val.user + " @ " + val.added
